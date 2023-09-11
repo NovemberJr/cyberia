@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 42px;
+  max-width: 1241px;
+  margin: 0 auto;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 387px;
+  height: 378px;
+  padding: 0 55px 29px 29px;
+  color: #fff;
+  text-align: left;
+}
+
+.title {
+  font-size: 28px;
+}
+
+.description {
+  font-size: 14px;
+}
