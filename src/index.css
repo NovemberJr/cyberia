@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App {
+  background: linear-gradient(180deg, #24252F 0%, #31313F 36.46%, #2F303D 44.58%, #242530 100%);
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
