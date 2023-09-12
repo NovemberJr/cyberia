@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../app/hooks"
-import { getProjects, selectProjects, selectCategories } from "./projectsSlice"
+import { initProjects, selectProjects, selectCategories } from "./projectsSlice"
 import Item from "./ProjectItem"
 import styles from "./Project.module.css"
 
@@ -10,8 +10,8 @@ const Projects = () => {
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-      dispatch(getProjects())
-    }, [getProjects])
+      dispatch(initProjects())
+    }, [])
 
     return <div>
       <h2>Проекты</h2>

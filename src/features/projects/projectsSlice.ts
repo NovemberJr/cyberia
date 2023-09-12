@@ -4,12 +4,14 @@ import { fetchProjects, Project, Category, fetchProjectCategories } from "./proj
 
 export interface projectsState {
   projects: Array<Project>,
-  categories: Array<Category>
+  categories: Array<Category>,
+  status: "loading" | "success"
 }
 
 const initialState: projectsState = {
   projects: [],
-  categories: []
+  categories: [],
+  status: "loading"
 }
 
 export const projectsSlice = createSlice({
@@ -22,22 +24,24 @@ export const projectsSlice = createSlice({
     setCategories: (state, action: PayloadAction<Array<Category>>) => {
       state.categories = action.payload
     },
+    setStatus: (state) => {
+      state.status = "success"
+    }
   }
 })
 
-export const { setProjects, setCategories } = projectsSlice.actions
+export const { setProjects, setCategories, setStatus } = projectsSlice.actions
 
 export const selectProjects = (state: RootState) => state.projects.projects
 export const selectCategories = (state: RootState) => state.projects.categories
 
-export const getProjects =
+export const initProjects =
   (): AppThunk =>
   async (dispatch, getState) => {
-    fetchProjects().then(resp => {
-      dispatch(setProjects(resp.items))
-    })
-    fetchProjectCategories().then(resp => {
-      dispatch(setCategories(resp.items))
+    Promise.all([fetchProjects(), fetchProjectCategories()]).then(([ projects, categories ]) => {      
+      dispatch(setProjects(projects))
+      dispatch(setCategories(categories))
+      dispatch(setStatus())
     })
   }
 
