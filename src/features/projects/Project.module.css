@@ -1,7 +1,5 @@
 .projects {
   color: #EEF3FF;
-  font-family: Rubik;
-  text-align: left;
 }
 
 .grid {
@@ -15,6 +13,7 @@
 
 .filters {
   display: flex;
+  gap: 125px;
   margin-top: 78px;
 }
 
@@ -25,6 +24,12 @@
   box-shadow: 0px 14px 61px 0px rgba(23, 27, 44, 0.75);
   transition: .3s;
   cursor: pointer;
+
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .filter:hover {
@@ -52,11 +57,4 @@
 
 .description {
   font-size: 14px;
-}
-
-.h1 {
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
 }

@@ -21,7 +21,7 @@ const Projects = () => {
 
     return <div className={styles.projects}>
       <div className="container">
-        <span className={styles.h1}>Проекты</span>
+        <span className="h1">Проекты</span>
         <div className={styles.filters}>
           {categories.map((el, i) => <div
             key={el.id}

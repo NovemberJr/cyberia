@@ -4,7 +4,7 @@ import Projects from "./features/projects/Projects"
 
 function App() {
   return (
-    <div className="App">
+    <div className="App regular">
       <Projects />
     </div>
   )

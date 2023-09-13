@@ -1,8 +1,4 @@
-import axios from 'axios'
-
-const axiosInstance = axios.create({
-    baseURL: 'https://backend.cyberia.studio/api/v1'
-});
+import { axiosInstance } from "../../app/api"
 
 export const fetchProjects = async (): Promise<Project[]> => {
     const resp = await axiosInstance.get('/projects')
@@ -12,11 +8,6 @@ export const fetchProjects = async (): Promise<Project[]> => {
 export const fetchProjectCategories = async (): Promise<Category[]> => {
     const resp = await axiosInstance.get('/project-categories')
     return resp.data.items
-}
-
-export const postFeedback = async () => {
-    const resp = await axiosInstance.post('/feedbacks')
-    return resp.data
 }
 
 export interface Project {
