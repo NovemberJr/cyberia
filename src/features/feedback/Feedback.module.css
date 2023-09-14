@@ -33,6 +33,10 @@
   margin-top: 20px;
 }
 
+.field {
+  position: relative;
+}
+
 .input {
   box-sizing: border-box;
   width: 100%;
@@ -62,7 +66,7 @@
 }
 
 .error {
-  margin-top: 8px;
+  /*margin-top: 8px;*/
   color: #E83B3B;
 }
 
@@ -88,4 +92,17 @@
 .button:disabled {
   background: #9AA8BA;
   cursor: default;
+}
+
+.label {
+  display: none;
+  background: #252631;
+  position: absolute;
+  padding: 0 14px 0 10px;
+  top: -10px;
+  left: 30px;
+}
+
+.label.active {
+  display: block;
 }
