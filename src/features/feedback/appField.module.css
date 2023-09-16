@@ -1,0 +1,49 @@
+.field {
+  position: relative;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  background: transparent;
+  color: #EFF3FF;
+  border-radius: 8px;
+  border: 1px solid #9AA8BA;
+  padding: 16px 18px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input.error {
+  border-color: #E83B3B;
+}
+
+.input::placeholder {
+  color: #EFF3FF;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.error {
+  /*margin-top: 8px;*/
+  color: #E83B3B;
+}
+
+.label {
+  display: none;
+  background: #252631;
+  position: absolute;
+  padding: 0 14px 0 10px;
+  top: -10px;
+  left: 30px;
+}
+
+.label.active {
+  display: block;
+}
