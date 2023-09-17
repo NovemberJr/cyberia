@@ -1,13 +1,8 @@
 import { axiosInstance } from "../../app/api"
 
 export const postFeedback = async (data: FeedbackData) => {
-    console.log(data)
-    return new Promise((resolve) => {
-        setTimeout(() => {resolve('xxx')}, 1000)
-    })
-    return 'sss'
-    //const resp = await axiosInstance.post('/feedbacks')
-    //return resp.data
+    const resp = await axiosInstance.post('/feedbacks', data)
+    return resp
 }
 
 export interface FeedbackData {
